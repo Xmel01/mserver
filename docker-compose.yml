@@ -13,7 +13,7 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - saves:/minecraft/saves
+      - saves:/minecraft
 
 volumes:
   saves:
