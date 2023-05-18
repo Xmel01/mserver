@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: minecraft-server:latest
+    stdin_open: true
+    tty: true
+    container_name: minecraft-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - saves:/minecraft/saves
+
+volumes:
+  saves:
